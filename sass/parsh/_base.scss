@@ -1,0 +1,63 @@
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+
+:root {
+    --p: #eb2f64;
+    --plight: #FF3366;
+    --pdark: #BA265D;
+    
+    --glight-1: #faf9f9;
+    --glight-2: #f4f2f2;
+    --glight-3: #f0eeee;
+    --glight-4: #ccc;
+    
+    --gdark-1: #333;
+    --gdark-2: #777;
+    --gdark-3: #999;
+    
+    --line: 1px solid var(--glight-2);
+    --shadow: 0 2rem  6rem rgba(0, 0, 0, .3);
+    --shadow-l: 0 2rem  5rem rgba(0,0,0,.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+::selection {
+    background-color: var(--p);
+    color: #FFF;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 400;
+    color: var(--gdark-2);
+    line-height: 1.6;
+    background-image: linear-gradient( to right bottom,
+    var(--plight),
+    var(--pdark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
